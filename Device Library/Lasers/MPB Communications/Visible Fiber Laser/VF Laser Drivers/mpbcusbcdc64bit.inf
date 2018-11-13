@@ -1,0 +1,32 @@
+[Version]
+Signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%MPBC%
+DriverVer=04/23/2010,1.0.0.0
+
+[MANUFACTURER]
+%MPBC%=DeviceList, NTx86, NTamd64
+
+[DeviceList.NTx86]
+%MPBC_CDC%=DriverInstall,USB\VID_1C69&PID_1000
+
+[DeviceList.NTamd64]
+%MPBC_CDC%=DriverInstall,USB\VID_1C69&PID_1000
+
+[DriverInstall]
+include=mdmcpq.inf
+CopyFiles=FakeModemCopyFileSection
+AddReg=LowerFilterAddReg,SerialPropPageAddReg
+
+[DriverInstall.Services]
+include = mdmcpq.inf
+AddService = usbser, 0x00000002, LowerFilter_Service_Inst
+
+; This adds the serial port property tab to the device properties dialog
+[SerialPropPageAddReg]
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[Strings]
+MPBC = "MPC Communications, Inc."
+MPBC_CDC = "MPBC USB CDC"

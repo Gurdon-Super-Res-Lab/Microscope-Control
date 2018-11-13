@@ -1,0 +1,4 @@
+All stacks have a 0.25 µm step size.
+
+Stack 02 is 0.1 second exposure time.
+Stack 03 is 1 second exposure time.
