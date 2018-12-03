@@ -1,0 +1,21 @@
+% Hardware Configuration File
+% Any line starting with "%" will be ignored
+% The first non-comment line must be the configuration name
+
+% Configuration Name:
+Example Microscope
+
+% Each line in this file defines 1 device
+% Each line should be as follows: Device Company, Device Type, Device Function, Device Engine Path, String Array of Device IDs/Ports/Channels
+% This file can be opened, modified, and saved using the VI found at Microscope-Control\Hardware Configuration\Hardware Configuration VIs\Write Configuration File.vi
+
+["IDS","Camera","Wide Field Drift Correction","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Cameras\\IDS\\IDS Camera Engine.vi"], ["1","","",""]
+["Prior","Stage","Sample XY","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Stages\\Prior\\ProScan 3\\ProScan 3 Stage Engine.vi"], ["COM5","","",""]
+["Prior","Stage","Sample Z","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Stages\\Generic 1 Axis DAQmx AO Stage\\Generic 1 Axis DAQmx AO Stage Engine.vi"], ["Dev1/ao0","10","0","0.025"]
+["Photometrics","Camera","Primary","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Cameras\\Photometrics\\Prime BSI\\Prime BSI Camera Engine.vi"], ["1","","",""]
+["Photometrics","Camera","Secondary","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Cameras\\Photometrics\\Prime BSI\\Prime BSI Camera Engine.vi"], ["2","","",""]
+["MPB Com","Laser","642 nm Excitation","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Lasers\\MPB Communications\\Visible Fiber Laser\\VF Laser Engine.vi"], ["COM8","","",""]
+["MPB Com","Laser","560 nm Excitation","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Lasers\\MPB Communications\\Visible Fiber Laser\\VF Laser Engine.vi"], ["COM9","","",""]
+["MPB Com","Laser","546 nm Excitation","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Lasers\\MPB Communications\\Visible Fiber Laser\\VF Laser Engine.vi"], ["COM13","","",""]
+["Coherent","Laser","488 nm Excitation","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Lasers\\Coherent\\Obis\\Obis Engine.vi"], ["COM11"]
+["Coherent","Laser","405 nm Excitation","C:\\Users\\George Sirinakis\\Documents\\Microscope Control 2016\\Device Library\\Lasers\\Coherent\\Obis\\Obis Engine.vi"], ["COM12"]

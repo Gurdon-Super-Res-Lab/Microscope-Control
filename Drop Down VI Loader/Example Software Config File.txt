@@ -1,0 +1,16 @@
+% Hardware Configuration File
+% Any line starting with "%" will be ignored
+% The first non-comment line must be the configuration name
+
+% Configuration Name:
+Example Microscope
+
+% Each line in this file (below) is the path to one microscope module. They will be loaded in the order listed here.
+
+% List of VI paths to load:
+
+C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\Device Panel\Device Panel.vi
+C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\Cambridge Laser Control\Cambridge Laser Control.vi
+C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\XY Sample Stage Control\XY Sample Stage.vi
+C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\Dual Camera Control\Dual Camera Control.vi
+C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\Wide Field Drift Correction\Wide Field Drift Correction.vi
