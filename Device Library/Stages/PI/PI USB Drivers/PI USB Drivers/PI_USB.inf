@@ -1,0 +1,660 @@
+;
+; PI_USB Setup Information file V3.11
+; Copyright (c) 1998-2017
+;
+; This file supports:
+;     Windows 7          Windows 7 x64
+;     Windows 8          Windows 8 x64
+;     Windows 8.1        Windows 8.1 x64
+;     Windows 10         Windows 10 x64
+;
+
+
+;******************************************************************************
+; Version Section
+;------------------------------------------------------------------------------
+[Version]
+Signature="$Windows NT$"
+Provider=%S_Provider%
+DriverVer=09/04/2017,3.11.0.0
+CatalogFile=PI_USB.cat
+Class=PI_USBControlledDevices
+ClassGUID={9A904B72-F772-41fd-88A4-CFC03F386148}
+
+
+;******************************************************************************
+; Class Install section (optional)
+;------------------------------------------------------------------------------
+[ClassInstall32] 
+AddReg=_AddReg_ClassInstall
+
+[_AddReg_ClassInstall]
+HKR,,,,"PI USB devices"
+HKR,,Icon,,"-20"
+
+
+;******************************************************************************
+; Options
+;------------------------------------------------------------------------------
+[ControlFlags]
+; Advanced options can be specified here.
+
+
+;******************************************************************************
+; Manufacturer section
+;------------------------------------------------------------------------------
+[Manufacturer]
+; 6.1 - Windows 7
+%S_Mfg%=_Models, ntx86.6.1, ntamd64.6.1, ntx86.10.0, ntamd64.10.0
+
+
+;******************************************************************************
+; Models Section
+;------------------------------------------------------------------------------
+; x86-based
+[_Models.ntx86.6.1]
+"PI C-884 Motor Controller"=_Install_01, USB\VID_1A72&PID_101C
+"PI C-891 Motor Controller"=_Install_02, USB\VID_1A72&PID_1023
+"PI C-863K012 Interface module"=_Install_03, USB\VID_1A72&PID_101B
+"PI D-710.SP1 PIOne Sensor Alignment Kit"=_Install_04, USB\VID_1A72&PID_101A
+"PI E-518 Digital Piezo Controller"=_Install_05, USB\VID_1A72&PID_1021
+"PI E-754 Digital Piezo Controller"=_Install_06, USB\VID_1A72&PID_1022
+"PI E-712 Digital Piezo Controller"=_Install_07, USB\VID_1A72&PID_1004
+"PI E-725 Digital Piezo Controller"=_Install_08, USB\VID_1A72&PID_1003
+"PI E-816 Computer Interface"=_Install_09, USB\VID_1A72&PID_100A
+"PI E-870"=_Install_10, USB\VID_1A72&PID_1019
+"PI E-723 Digital Piezo Controller"=_Install_11, USB\VID_1A72&PID_1017
+"PI E-727 Digital Piezo Controller"=_Install_12, USB\VID_1A72&PID_101E
+"PI E-873 Q-Motion Controller"=_Install_13, USB\VID_1A72&PID_101F
+"PI C-885 PIMotionMaster"=_Install_14, USB\VID_1A72&PID_1024
+"PI C-886 Modular Hexapod Controller"=_Install_15, USB\VID_1A72&PID_1028
+"PI USB Manual Control Pad"=_Install_16, USB\VID_1A72&PID_1018&MI_01
+"PI E852B0068"=_Install_17, USB\VID_1A72&PID_1020
+"PI E-855 Sensor Evaluation Electronics"=_Install_18, USB\VID_1A72&PID_102A
+"PI E-871 PiezoMike - Q-Motion Controller"=_Install_19, USB\VID_1A72&PID_102C
+
+[_Models.ntx86.10.0]
+"PI C-884 Motor Controller"=_Install_01, USB\VID_1A72&PID_101C
+"PI C-891 Motor Controller"=_Install_02, USB\VID_1A72&PID_1023
+"PI C-863K012 Interface module"=_Install_03, USB\VID_1A72&PID_101B
+"PI D-710.SP1 PIOne Sensor Alignment Kit"=_Install_04, USB\VID_1A72&PID_101A
+"PI E-518 Digital Piezo Controller"=_Install_05, USB\VID_1A72&PID_1021
+"PI E-754 Digital Piezo Controller"=_Install_06, USB\VID_1A72&PID_1022
+"PI E-712 Digital Piezo Controller"=_Install_07, USB\VID_1A72&PID_1004
+"PI E-725 Digital Piezo Controller"=_Install_08, USB\VID_1A72&PID_1003
+"PI E-816 Computer Interface"=_Install_09, USB\VID_1A72&PID_100A
+"PI E-870"=_Install_10, USB\VID_1A72&PID_1019
+"PI E-723 Digital Piezo Controller"=_Install_11, USB\VID_1A72&PID_1017
+"PI E-727 Digital Piezo Controller"=_Install_12, USB\VID_1A72&PID_101E
+"PI E-873 Q-Motion Controller"=_Install_13, USB\VID_1A72&PID_101F
+"PI C-885 PIMotionMaster"=_Install_14, USB\VID_1A72&PID_1024
+"PI C-886 Modular Hexapod Controller"=_Install_15, USB\VID_1A72&PID_1028
+"PI USB Manual Control Pad"=_Install_16, USB\VID_1A72&PID_1018&MI_01
+"PI E852B0068"=_Install_17, USB\VID_1A72&PID_1020
+"PI E-855 Sensor Evaluation Electronics"=_Install_18, USB\VID_1A72&PID_102A
+"PI E-871 PiezoMike - Q-Motion Controller"=_Install_19, USB\VID_1A72&PID_102C
+
+; x64-based
+[_Models.ntamd64.6.1]
+"PI C-884 Motor Controller"=_Install_01, USB\VID_1A72&PID_101C
+"PI C-891 Motor Controller"=_Install_02, USB\VID_1A72&PID_1023
+"PI C-863K012 Interface module"=_Install_03, USB\VID_1A72&PID_101B
+"PI D-710.SP1 PIOne Sensor Alignment Kit"=_Install_04, USB\VID_1A72&PID_101A
+"PI E-518 Digital Piezo Controller"=_Install_05, USB\VID_1A72&PID_1021
+"PI E-754 Digital Piezo Controller"=_Install_06, USB\VID_1A72&PID_1022
+"PI E-712 Digital Piezo Controller"=_Install_07, USB\VID_1A72&PID_1004
+"PI E-725 Digital Piezo Controller"=_Install_08, USB\VID_1A72&PID_1003
+"PI E-816 Computer Interface"=_Install_09, USB\VID_1A72&PID_100A
+"PI E-870"=_Install_10, USB\VID_1A72&PID_1019
+"PI E-723 Digital Piezo Controller"=_Install_11, USB\VID_1A72&PID_1017
+"PI E-727 Digital Piezo Controller"=_Install_12, USB\VID_1A72&PID_101E
+"PI E-873 Q-Motion Controller"=_Install_13, USB\VID_1A72&PID_101F
+"PI C-885 PIMotionMaster"=_Install_14, USB\VID_1A72&PID_1024
+"PI C-886 Modular Hexapod Controller"=_Install_15, USB\VID_1A72&PID_1028
+"PI USB Manual Control Pad"=_Install_16, USB\VID_1A72&PID_1018&MI_01
+"PI E852B0068"=_Install_17, USB\VID_1A72&PID_1020
+"PI E-855 Sensor Evaluation Electronics"=_Install_18, USB\VID_1A72&PID_102A
+"PI E-871 PiezoMike - Q-Motion Controller"=_Install_19, USB\VID_1A72&PID_102C
+
+[_Models.ntamd64.10.0]
+"PI C-884 Motor Controller"=_Install_01, USB\VID_1A72&PID_101C
+"PI C-891 Motor Controller"=_Install_02, USB\VID_1A72&PID_1023
+"PI C-863K012 Interface module"=_Install_03, USB\VID_1A72&PID_101B
+"PI D-710.SP1 PIOne Sensor Alignment Kit"=_Install_04, USB\VID_1A72&PID_101A
+"PI E-518 Digital Piezo Controller"=_Install_05, USB\VID_1A72&PID_1021
+"PI E-754 Digital Piezo Controller"=_Install_06, USB\VID_1A72&PID_1022
+"PI E-712 Digital Piezo Controller"=_Install_07, USB\VID_1A72&PID_1004
+"PI E-725 Digital Piezo Controller"=_Install_08, USB\VID_1A72&PID_1003
+"PI E-816 Computer Interface"=_Install_09, USB\VID_1A72&PID_100A
+"PI E-870"=_Install_10, USB\VID_1A72&PID_1019
+"PI E-723 Digital Piezo Controller"=_Install_11, USB\VID_1A72&PID_1017
+"PI E-727 Digital Piezo Controller"=_Install_12, USB\VID_1A72&PID_101E
+"PI E-873 Q-Motion Controller"=_Install_13, USB\VID_1A72&PID_101F
+"PI C-885 PIMotionMaster"=_Install_14, USB\VID_1A72&PID_1024
+"PI C-886 Modular Hexapod Controller"=_Install_15, USB\VID_1A72&PID_1028
+"PI USB Manual Control Pad"=_Install_16, USB\VID_1A72&PID_1018&MI_01
+"PI E852B0068"=_Install_17, USB\VID_1A72&PID_1020
+"PI E-855 Sensor Evaluation Electronics"=_Install_18, USB\VID_1A72&PID_102A
+"PI E-871 PiezoMike - Q-Motion Controller"=_Install_19, USB\VID_1A72&PID_102C
+
+
+;******************************************************************************
+; Install sections x86-based systems
+;------------------------------------------------------------------------------
+[_Install_01.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_01.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_01.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_02.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_02.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_02.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_03.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_03.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_03.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_04.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_04.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_04.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_05.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_05.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_05.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_06.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_06.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_06.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_07.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_07.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_07.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_08.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_08.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_08.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_09.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_09.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+[_Install_09.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_10.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_10.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_10.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_11.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_11.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_11.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_12.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_12.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_12.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_13.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_13.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_13.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_14.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_14.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_14.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_15.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_15.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_15.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_16.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_16.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_16.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_17.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_17.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_17.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_18.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_18.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_18.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_Install_19.ntx86]
+CopyFiles=_CopyFiles_sys_x86
+
+[_Install_19.ntx86.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_19.ntx86.Services]
+AddService = PI_USB, 0x00000002, _AddService_x86, _EventLog_x86
+
+[_AddService_x86]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\PI_USB.sys
+
+[_EventLog_x86]
+AddReg=_EventLog_AddReg_x86
+
+[_EventLog_AddReg_x86]
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\PI_USB.sys"
+HKR,,TypesSupported,  %REG_DWORD%,7
+
+
+;******************************************************************************
+; Install sections x64-based systems
+;------------------------------------------------------------------------------
+[_Install_01.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_01.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_01.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_02.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_02.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_02.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_03.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_03.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_03.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_04.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_04.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_04.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_05.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_05.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_05.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_06.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_06.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_06.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_07.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_07.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_07.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_08.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_08.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_08.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_09.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_09.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_09.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_10.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_10.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_10.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_11.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_11.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_11.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_12.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_12.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_12.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_13.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_13.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_13.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_14.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_14.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_14.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_15.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_15.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_15.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_16.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_16.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_16.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_17.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_17.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_17.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_18.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_18.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_18.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_Install_19.ntamd64]
+CopyFiles=_CopyFiles_sys_x64
+
+[_Install_19.ntamd64.HW]
+DelReg=_DelReg_HW
+AddReg=_AddReg_HW
+
+[_Install_19.ntamd64.Services]
+AddService = PI_USB_x64, 0x00000002, _AddService_x64, _EventLog_x64
+
+[_AddService_x64]
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\PI_USB_x64.sys
+
+[_EventLog_x64]
+AddReg=_EventLog_AddReg_x64
+
+[_EventLog_AddReg_x64]
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\PI_USB_x64.sys"
+HKR,,TypesSupported,  %REG_DWORD%,7
+
+
+;******************************************************************************
+; Registry sections
+;------------------------------------------------------------------------------
+[_DelReg_HW]
+HKR,,DriverUserInterfaceGuid
+HKR,,DisableDefaultInterface
+HKR,,CleanupWizard_DeviceIdentString
+HKR,,ConfigIndex
+HKR,,Interface
+HKR,,AlternateSetting
+HKR,,FxFwFile
+HKR,,FxBootloaderCheck
+HKR,,FxExtRamBase
+
+[_AddReg_HW]
+HKR,,DriverUserInterfaceGuid,%REG_SZ%,"{1F5E5051-5AF6-4017-962B-A7C180A49CAE}"
+HKR,,DisableDefaultInterface, %REG_DWORD%, 1
+
+; Set the default behaviour of the driver 
+; For a description of the parameters, refer to the USBIO Reference Manual.
+HKR,,PowerStateOnOpen,      %REG_DWORD%, 0
+HKR,,PowerStateOnClose,     %REG_DWORD%, 0
+HKR,,MinPowerStateUsed,     %REG_DWORD%, 3
+HKR,,MinPowerStateUnused,   %REG_DWORD%, 3
+HKR,,EnableRemoteWakeup,    %REG_DWORD%, 0
+HKR,,AbortPipesOnPowerDown, %REG_DWORD%, 1
+; ATTENTION!!! UnconfigureOnClose must be set to '0' for W10 WHQL testing
+HKR,,UnconfigureOnClose,    %REG_DWORD%, 1
+HKR,,ResetDeviceOnClose,    %REG_DWORD%, 0
+HKR,,MaxIsoPackets,         %REG_DWORD%, 512
+HKR,,ShortTransferOk,       %REG_DWORD%, 1
+HKR,,RequestTimeout,        %REG_DWORD%, 1000
+HKR,,SuppressPnPRemoveDlg,  %REG_DWORD%, 1
+HKR,,ConfigDescMinQuerySize,%REG_DWORD%, 0
+
+; Uncomment the following lines to enable automatic configuration 
+; of the device when the USBIO driver starts.
+; ATTENTION!!! For W10 WHQL testing device must be configured if driver is started! Please enable ConfigIndex as minimum.
+;HKR,,ConfigIndex,          %REG_DWORD%, 0
+;HKR,,Interface,            %REG_DWORD%, 0
+;HKR,,AlternateSetting,     %REG_DWORD%, 0
+
+
+;******************************************************************************
+; Copy Files section
+;------------------------------------------------------------------------------
+[_CopyFiles_sys_x86]
+PI_USB.sys,,,0x00000004
+
+[_CopyFiles_sys_x64]
+PI_USB_x64.sys,,,0x00000004
+
+
+;******************************************************************************
+; Destination Directories
+;------------------------------------------------------------------------------
+[DestinationDirs]
+DefaultDestDir     =     12   ; %SystemRoot%\system32\drivers 
+_CopyFiles_sys_x86 =     12
+_CopyFiles_sys_x64 =     12
+
+
+;******************************************************************************
+; Disk Layout
+;------------------------------------------------------------------------------
+[SourceDisksNames.x86]
+1=%S_DiskName%,,
+
+[SourceDisksNames.amd64]
+1=%S_DiskName%,,
+
+[SourceDisksFiles.x86]
+; Specify the correct file name of the driver binary.
+PI_USB.sys=1
+
+[SourceDisksFiles.amd64]
+; Specify the correct file name of the driver binary.
+PI_USB_x64.sys=1
+
+
+;******************************************************************************
+; Text Strings
+;------------------------------------------------------------------------------
+[Strings]
+;
+; Non-Localizable Strings, DO NOT MODIFY!
+;
+REG_SZ         = 0x00000000
+REG_MULTI_SZ   = 0x00010000
+REG_EXPAND_SZ  = 0x00020000
+REG_BINARY     = 0x00000001
+REG_DWORD      = 0x00010001
+
+;
+; Localizable Strings, modify as required
+;
+
+; provider name
+S_Provider="Physik Instrumente (PI)" 
+; manufacturer name
+S_Mfg="Physik Instrumente (PI)"
+
+; disk name
+S_DiskName="PI_USB disk"
+
+
+; *** EOF ***
