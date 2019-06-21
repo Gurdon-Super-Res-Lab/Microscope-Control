@@ -1,0 +1,9 @@
+﻿  Source.cpp
+     Creating library D:\Microscope-Control\Tools\LabView IMAQ Images\LabView IMAQ Images DLL Files\x64\Release\LabView IMAQ Images.lib and object D:\Microscope-Control\Tools\LabView IMAQ Images\LabView IMAQ Images DLL Files\x64\Release\LabView IMAQ Images.exp
+  Generating code
+  1 of 3 functions (33.3%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  LabView IMAQ Images.vcxproj -> D:\Microscope-Control\Tools\LabView IMAQ Images\LabView IMAQ Images DLL Files\x64\Release\LabView IMAQ Images.dll
+  LabView IMAQ Images.vcxproj -> D:\Microscope-Control\Tools\LabView IMAQ Images\LabView IMAQ Images DLL Files\x64\Release\LabView IMAQ Images.pdb (Full PDB)
