@@ -1,1 +1,0 @@
-{"Z Drift Threshold":0.01,"Z Stage Move Limit (µm)":1,"XY Drift Threshold":0.14999999999999999,"XY Stage Move Limit (µm)":1,"Frame Accumulations":50,"Abort If Error":true,"Flip XY Axis":false,"Invert X Axis":false,"Invert Y Axis":true,"Invert Z Axis":true,"Z Correction Active":true,"XY Correction Active":true,"PID Values":[2,0,0],"Update Delay (ms)":0}
