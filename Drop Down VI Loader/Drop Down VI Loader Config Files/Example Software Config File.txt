@@ -8,14 +8,13 @@ Example Microscope
 % Each line in this file (below) is the path to one microscope module. They will be loaded in the order listed here.
 
 % List of VI paths to load:
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\Device Panel\Device Panel.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\Cambridge Laser Control\Cambridge Laser Control.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\4Pi Sample Focus Control\4Pi Sample Focus Control.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\XY Sample Stage Control\XY Sample Stage.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\4Pi Capture Manager\4Pi Capture Manager.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\4Pi Objective Image Alignment\4Pi Objective Image Alignment.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\SMS Image Preview\SMS Image Preview.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\4Pi Interference Locator\4Pi Interference Locator.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\4Pi Dual DM Control\4Pi Dual DM Control.vi
-C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\Wide Field Drift Correction\Wide Field Drift Correction.vi
-%C:\Users\George Sirinakis\Documents\Microscope-Control\Microscope Modules\Spiral Search Tool\Spiral Search Tool.vi
+...\Microscope-Control\Microscope Modules\Device Panel\Device Panel.vi
+...\Microscope-Control\Microscope Modules\Cambridge Laser Control\Cambridge Laser Control.vi
+...\Microscope-Control\Microscope Modules\4Pi Sample Focus Control\4Pi Sample Focus Control.vi
+...\Microscope-Control\Microscope Modules\XY Sample Stage Control\XY Sample Stage.vi
+...\Microscope-Control\Microscope Modules\4Pi Capture Manager\4Pi Capture Manager.vi
+...\Microscope-Control\Microscope Modules\4Pi Objective Image Alignment\4Pi Objective Image Alignment.vi
+...\Microscope-Control\Microscope Modules\4Pi Dual DM Control\4Pi Dual DM Control.vi
+...\Microscope-Control\Microscope Modules\4Pi Astigmatism Alignment\4Pi Astigmatism Alignment.vi
+...\Microscope-Control\Microscope Modules\4Pi Interference Locator\4Pi Interference Locator.vi
+...\Microscope-Control\Microscope Modules\4Pi Objective Lock\4Pi Objective Lock.vi
