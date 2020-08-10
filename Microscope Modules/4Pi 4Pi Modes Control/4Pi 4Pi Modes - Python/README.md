@@ -23,3 +23,11 @@ You can customise the parameters for the LabVIEW configuration using additional 
 # Configuration for 4Pi modes
 - Double click on run_prompt.bat to open a shell
 - Type `python make_configuration_4pi.py` and hit enter to accept the default options and generate the configuration for LabVIEW
+
+# Testing the LabVIEW configuration (no hardware)
+- Double click on run_prompt.bat to open a shell
+- Type `python test_configuration.py` and hit enter
+
+# Testing the LabVIEW configuration (with hardware)
+- Double click on run_prompt.bat to open a shell
+- Type `python test_configuration.py --hardware` and hit enter

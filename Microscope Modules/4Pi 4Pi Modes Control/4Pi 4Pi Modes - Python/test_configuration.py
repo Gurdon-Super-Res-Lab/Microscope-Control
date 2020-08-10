@@ -1,44 +1,38 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import sys
-import numpy as np
-import json  # noqa
 import argparse
-
+import json  # noqa
+import sys
 from os import path
 
-from numpy.linalg import norm
-
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import (
-    QGridLayout, QLabel, QWidget,
-    QScrollArea, QSlider, QDoubleSpinBox, QSplitter,
-    QApplication, QMainWindow, QPushButton, QFrame,
-    )
-from matplotlib.figure import Figure
-
+import matplotlib.pyplot as plt  # noqa
+import numpy as np
 from matplotlib.backends.backend_qt5agg import FigureCanvas
+from matplotlib.figure import Figure
+from numpy.linalg import norm
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import (QApplication, QDoubleSpinBox, QFrame, QGridLayout,
+                             QLabel, QMainWindow, QPushButton, QScrollArea,
+                             QSlider, QSplitter, QWidget)
 
 from dmplot import DMPlot
-import matplotlib.pyplot as plt  # noqa
-
-
 from make_configuration_4pi import get_def_files
+
+MAX_NM = 5500
 
 
 class RelSlider:
-
     def __init__(self, val, cb):
         self.old_val = None
         self.fto100mul = 100
         self.cb = cb
 
         self.sba = QDoubleSpinBox()
-        self.sba.setMinimum(-1000)
-        self.sba.setMaximum(1000)
+        self.sba.setMinimum(-MAX_NM)
+        self.sba.setMaximum(MAX_NM)
         self.sba.setDecimals(6)
-        self.sba.setToolTip('Effective value')
+        self.sba.setToolTip('Effective value [nm]')
         self.sba.setValue(val)
         self.sba_color(val)
         self.sba.setSingleStep(1.25e-3)
@@ -47,13 +41,13 @@ class RelSlider:
         self.qsr.setMinimum(-100)
         self.qsr.setMaximum(100)
         self.qsr.setValue(0)
-        self.qsr.setToolTip('Drag to apply relative delta')
+        self.qsr.setToolTip('Drag to apply relative delta [nm]')
 
         self.sbm = QDoubleSpinBox()
-        self.sbm.setMinimum(0.01)
-        self.sbm.setMaximum(1000)
+        self.sbm.setMinimum(MAX_NM / 2)
+        self.sbm.setMaximum(MAX_NM)
         self.sbm.setSingleStep(1.25e-3)
-        self.sbm.setToolTip('Maximum relative delta')
+        self.sbm.setToolTip('Maximum relative delta [nm]')
         self.sbm.setDecimals(2)
         self.sbm.setValue(4.0)
 
@@ -64,6 +58,7 @@ class RelSlider:
                 self.sba_color(val)
                 self.cb(val)
                 self.unblock()
+
             return f
 
         def qs1_cb():
@@ -75,12 +70,13 @@ class RelSlider:
                     self.unblock()
                     return
 
-                val = self.old_val + self.qsr.value()/100*self.sbm.value()
+                val = self.old_val + self.qsr.value() / 100 * self.sbm.value()
                 self.sba.setValue(val)
                 self.sba_color(val)
                 self.cb(val)
 
                 self.unblock()
+
             return f
 
         def qs1_end():
@@ -89,6 +85,7 @@ class RelSlider:
                 self.qsr.setValue(0)
                 self.old_val = None
                 self.unblock()
+
             return f
 
         def qs1_start():
@@ -96,6 +93,7 @@ class RelSlider:
                 self.block()
                 self.old_val = self.get_value()
                 self.unblock()
+
             return f
 
         self.sba_cb = sba_cb()
@@ -136,7 +134,7 @@ class RelSlider:
         self.sbm.setEnabled(False)
 
     def fto100(self, f):
-        return int((f + self.m2)/(2*self.m2)*self.fto100mul)
+        return int((f + self.m2) / (2 * self.m2) * self.fto100mul)
 
     def get_value(self):
         return self.sba.value()
@@ -178,16 +176,16 @@ class SquareRoot:
     name = 'v = 2.0*np.sqrt((u + 1.0)/2.0) - 1.0'
 
     def __call__(self, u):
-        assert(np.all(np.isfinite(u)))
+        assert (np.all(np.isfinite(u)))
 
         if norm(u, np.inf) > 1.:
             u[u > 1.] = 1.
             u[u < -1.] = -1.
-        assert(norm(u, np.inf) <= 1.)
+        assert (norm(u, np.inf) <= 1.)
 
-        v = 2*np.sqrt((u + 1.0)/2.0) - 1.0
-        assert(np.all(np.isfinite(v)))
-        assert(norm(v, np.inf) <= 1.)
+        v = 2 * np.sqrt((u + 1.0) / 2.0) - 1.0
+        assert (np.all(np.isfinite(v)))
+        assert (norm(v, np.inf) <= 1.)
         del u
 
         return v
@@ -197,7 +195,6 @@ class SquareRoot:
 
 
 class DMWindow(QMainWindow):
-
     def __init__(self, args, app, C, modes, serials):
         super().__init__()
         self.args = args
@@ -256,6 +253,7 @@ class DMWindow(QMainWindow):
             def f(r):
                 self.z[i] = r
                 update()
+
             return f
 
         scroll = QScrollArea()
@@ -300,11 +298,10 @@ if __name__ == '__main__':
 
     args = app.arguments()
     parser = argparse.ArgumentParser(
-        description='',
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument(
-        '--hardware', action='store_true',
-        help='Actually drive the DM hardware')
+        description='', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument('--hardware',
+                        action='store_true',
+                        help='Actually drive the DM hardware')
     args = parser.parse_args(args[1:])
 
     fname = path.join(get_def_files(), 'config.json')
