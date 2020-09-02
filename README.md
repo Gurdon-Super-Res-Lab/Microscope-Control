@@ -6,7 +6,7 @@ Modular microscope control in LabView for camera based systems primarily used fo
 * NI Device Drivers (DAQmx and VISA are required)
 * NI Vision Development Module
 
-Due to third party camera driver limitations we are stuck on LabVIEW for 2016 for the moment.
+Due to third party camera driver limitations we are stuck on LabVIEW 2016 for the moment.
 
 # Setup and Operation
 Please visit the [Microscope-Control](https://www.youtube.com/channel/UC7R7VayC6sGIrlphbH7pn-w/) YouTube channel for information on how to setup and run this software.
