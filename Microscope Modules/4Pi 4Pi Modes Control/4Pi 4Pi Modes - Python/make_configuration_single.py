@@ -141,20 +141,20 @@ NB: DO NOT USE SPACES!''')
         selection = int(selection)
 
     with File(calibfile, 'r') as f:
-        wavelength = f['/WeightedLSCalib/wavelength'][()]
+        wavelength = f['/RegLSCalib/wavelength'][()]
         k = wavelength / (2 * np.pi)
-        H = k * f['/WeightedLSCalib/H'][()]
-        C = f['/WeightedLSCalib/C'][()] / k
-        z = f['/WeightedLSCalib/z0'][()]
-        n = int(f['/WeightedLSCalib/cart/RZern/n'][()])
-        serial = f['/WeightedLSCalib/dm_serial'][()]
+        H = k * f['/RegLSCalib/H'][()]
+        C = f['/RegLSCalib/C'][()] / k
+        z = f['/RegLSCalib/z0'][()]
+        n = int(f['/RegLSCalib/cart/RZern/n'][()])
+        serial = f['/RegLSCalib/dm_serial'][()]
         print(f'DM: {serial} file: {calibfile}')
     del serial
 
     serials = []
     for c in sorted(cfiles):
         with File(c, 'r') as f:
-            serials.append(f['/WeightedLSCalib/dm_serial'][()])
+            serials.append(f['/RegLSCalib/dm_serial'][()])
 
     r = RZern(n)
     assert (r.nk == H.shape[0])
