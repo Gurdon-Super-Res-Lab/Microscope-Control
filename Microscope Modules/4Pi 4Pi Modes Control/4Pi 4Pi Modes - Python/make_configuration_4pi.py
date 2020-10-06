@@ -161,16 +161,16 @@ NB: DO NOT USE SPACES and USE QUOTES!''')
     calibs = []
     for c in cfiles:
         with File(c, 'r') as f:
-            wavelength = f['/WeightedLSCalib/wavelength'][()]
+            wavelength = f['/RegLSCalib/wavelength'][()]
             k = wavelength/(2*np.pi)
-            H = k*f['/WeightedLSCalib/H'][()]
-            C = f['/WeightedLSCalib/C'][()]/k
+            H = k*f['/RegLSCalib/H'][()]
+            C = f['/RegLSCalib/C'][()]/k
             d = {
                 'H': H,
                 'C': C,
-                'z': f['/WeightedLSCalib/z0'][()],
-                'n': int(f['/WeightedLSCalib/cart/RZern/n'][()]),
-                'serial': f['/WeightedLSCalib/dm_serial'][()],
+                'z': f['/RegLSCalib/z0'][()],
+                'n': int(f['/RegLSCalib/cart/RZern/n'][()]),
+                'serial': f['/RegLSCalib/dm_serial'][()],
             }
             print(f'DM: {d["serial"]} file: {c}')
             calibs.append(d)
