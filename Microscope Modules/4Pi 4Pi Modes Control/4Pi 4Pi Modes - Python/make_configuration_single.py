@@ -85,7 +85,7 @@ if __name__ == '__main__':
     parser.set_defaults(flipx=0)
     parser.add_argument('--flipy', dest='flipy', action='store_true')
     parser.add_argument('--no-flipy', dest='flipy', action='store_false')
-    parser.set_defaults(flipy=1)
+    parser.set_defaults(flipy=0)
     parser.add_argument('--rotate',
                         default=0.0,
                         type=float,
@@ -114,6 +114,10 @@ NB: DO NOT USE SPACES!''')
                         type=int,
                         default=22,
                         help='Minimum Zernike Noll index to consider')
+    parser.add_argument('--units',
+                        choices=['rad', 'nm', 'waves'],
+                        default='rad',
+                        help='Units to use for Zernike coefficients')
     args = parser.parse_args()
 
     deffiles = get_def_files()
@@ -141,10 +145,9 @@ NB: DO NOT USE SPACES!''')
         selection = int(selection)
 
     with File(calibfile, 'r') as f:
-        wavelength = f['/RegLSCalib/wavelength'][()]
-        k = wavelength / (2 * np.pi)
-        H = k * f['/RegLSCalib/H'][()]
-        C = f['/RegLSCalib/C'][()] / k
+        wavelength_nm = f['/RegLSCalib/wavelength'][()]
+        H = f['/RegLSCalib/H'][()]
+        C = f['/RegLSCalib/C'][()]
         z = f['/RegLSCalib/z0'][()]
         n = int(f['/RegLSCalib/cart/RZern/n'][()])
         serial = f['/RegLSCalib/dm_serial'][()]
@@ -180,6 +183,9 @@ NB: DO NOT USE SPACES!''')
     # serial numbers
     conf['Serials'] = serials
 
+    # units
+    conf['Units'] = args.units
+
     # flats excluding ttd
     u = np.zeros(2 * C.shape[0])
     z[:4] = 0
@@ -199,6 +205,7 @@ NB: DO NOT USE SPACES!''')
     zernike_indices = get_noll_indices(args)
     print('Selected Zernike indices are:')
     print(zernike_indices)
+    print(f'Selected units: {args.units}')
     print()
 
     C = C[:, zernike_indices - 1]
@@ -210,7 +217,17 @@ NB: DO NOT USE SPACES!''')
     else:
         raise NotImplementedError()
 
-    conf['Matrix'] = CC.tolist()
+    if args.units == 'rad':
+        kk = 1
+    elif args.units == 'nm':
+        kk = wavelength_nm / (2 * np.pi)
+    elif args.units == 'waves':
+        kk = 1 / (2 * np.pi)
+    else:
+        raise NotImplementedError()
+
+    CCunits = CC / kk
+    conf['Matrix'] = CCunits.tolist()
 
     # mode names
     ntab = r.ntab
