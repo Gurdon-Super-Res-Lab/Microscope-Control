@@ -1,0 +1,29 @@
+% Hardware Configuration File
+% Any line starting with "%" will be ignored
+% The first non-comment line must be the configuration name
+
+% Configuration Name:
+4Pi EMBL
+
+% Each line in this file defines 1 device
+% Each line should be as follows: Device Company, Device Type, Device Function, Device Engine Path, Array of Device IDs/Ports/Channels
+
+["PI","Stage","Sample XY","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Stages\\PI\\M-686 - XY Piezomotor Stage\\M-686 Stage Engine.vi"], ["COM10","1","2",""]
+["PI","Stage","Sample Z","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Stages\\PI\\P-541 - Z Pizeo Stage\\P-541 Stage Engine.vi"], ["E-816","Z","",""]
+["ASI","Stage","Adj Cavity","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Stages\\ASI\\LS-50\\LS-50 Stage Engine.vi"], ["COM8","","",""]
+["PI","Stage","Sample Coarse Z","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Stages\\PI\\M-227 - DC Mike Motors\\M-227 Stage Engine.vi"], ["COM9","","",""]
+["PI","Stage","Objective Z","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Stages\\PI\\N-664 - Linear Translation Stage\\N-664 Stage Engine.vi"], ["COM17","","",""]
+["PI","Stage","Objective XY","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Stages\\PI\\P-733 - XY Piezo Stage\\P-733 XY Stage Engine.vi"], ["1","2","",""]
+["MPB Com","Laser","560 nm Excitation","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Lasers\\MPB Communications\\Visible Fiber Laser\\VF Laser Engine.vi"], ["COM19","","",""]
+["MPB Com","Laser","642 nm Excitation","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Lasers\\MPB Communications\\Visible Fiber Laser\\VF Laser Engine.vi"], ["COM11","","",""]
+["Measurement Computing","AOTF","Primary","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\AOTFs\\Generic MC External Control\\MC AOTF Engine.vi"], ["0","","",""]
+["Hamamatsu","Camera","Primary","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Cameras\\Hamamatsu\\Orca Flash\\Orca Flash Engine.vi"], ["0","","",""]
+["Thorlabs","Shutter","4Pi Lower","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Shutters\\EMBL 4Pi Shutters\\EMBL 4Pi Shutter Engine.vi"], ["COM3","100","101",""]
+["Thorlabs","Shutter","4Pi Upper","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Shutters\\EMBL 4Pi Shutters\\EMBL 4Pi Shutter Engine.vi"], ["COM3","801","800",""]
+["IDS","Camera","4Pi Objective Lock","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Cameras\\IDS\\IDS Camera Engine.vi"], ["2",""]
+["IDS","Camera","Overview","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Cameras\\IDS\\IDS Camera Engine.vi"], ["1",""]
+["Ximea","Camera","4Pi Focus Lock","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Cameras\\Ximea\\Ximea Camera Engine.vi"], ["0","","",""]
+["Toptica","Laser","405 nm Excitation","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Lasers\\Toptica\\iBeam Smart\\iBeam Laser Engine.vi"], ["COM4","","",""]
+["Toptica","Laser","488 nm Excitation","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Lasers\\Toptica\\iBeam Smart\\iBeam Laser Engine.vi"], ["COM5","","",""]
+["Toptica","Laser","940 nm Excitation","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\Lasers\\Toptica\\iBeam Smart\\iBeam Laser Engine.vi"], ["COM16","","",""]
+["Alchitry","FPGA","Mojo","C:\\Users\\Ries Lab\\Documents\\Microscope Control from Sheng Account\\Microscope-Control\\Device Library\\FPGA\\Mojo V3\\Mojo Engine.vi"], ["COM20","","",""]
