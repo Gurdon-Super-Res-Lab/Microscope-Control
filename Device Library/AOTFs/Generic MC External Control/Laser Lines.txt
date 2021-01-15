@@ -1,1 +1,1 @@
-{"Wavelength":[0,405,488,546,560,642],"AO Line":["Dev0/AuxPort/Do0","Dev0/Ao14","Dev0/Ao12","Dev0/Ao10","Dev0/Ao1","Dev0/Ao0"]}
+{"Wavelength":[0,405,488,500,560,642],"AO Line":["Dev0/AuxPort/Do0","Dev0/Ao14","Dev0/Ao12","Dev0/Ao7","Dev0/Ao1","Dev0/Ao0"]}

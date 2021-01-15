@@ -17,4 +17,3 @@ C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Con
 C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Interference Locator\4Pi Interference Locator.vi
 C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Dual DM Control\4Pi Dual DM Control.vi
 C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Objective Image Alignment\4Pi Objective Image Alignment.vi
-C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Objective Lock\4Pi Objective Lock.vi
