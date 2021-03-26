@@ -13,7 +13,7 @@ import numpy as np
 from h5py import File
 
 from czernike import RZern
-from make_configuration_4pi import default_name, get_def_files
+from make_configuration_4pi import default_name, get_def_files, h5_read_str
 
 
 def get_noll_indices(args):
@@ -144,20 +144,20 @@ NB: DO NOT USE SPACES!''')
                 pass
         selection = int(selection)
 
-    with File(calibfile, 'r') as f:
-        wavelength_nm = f['/RegLSCalib/wavelength'][()]
-        H = f['/RegLSCalib/H'][()]
-        C = f['/RegLSCalib/C'][()]
-        z = f['/RegLSCalib/z0'][()]
-        n = int(f['/RegLSCalib/cart/RZern/n'][()])
-        serial = f['/RegLSCalib/dm_serial'][()]
+    with File(calibfile, 'r') as h5f:
+        wavelength_nm = h5f['/RegLSCalib/wavelength'][()]
+        H = h5f['/RegLSCalib/H'][()]
+        C = h5f['/RegLSCalib/C'][()]
+        z = h5f['/RegLSCalib/z0'][()]
+        n = int(h5f['/RegLSCalib/cart/RZern/n'][()])
+        serial = h5_read_str(h5f, '/RegLSCalib/dm_serial')
         print(f'DM: {serial} file: {calibfile}')
     del serial
 
     serials = []
     for c in sorted(cfiles):
-        with File(c, 'r') as f:
-            serials.append(f['/RegLSCalib/dm_serial'][()])
+        with File(c, 'r') as h5f:
+            serials.append(h5_read_str(h5f, '/RegLSCalib/dm_serial'))
 
     r = RZern(n)
     assert (r.nk == H.shape[0])
