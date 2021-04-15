@@ -16,6 +16,13 @@ from numpy.linalg import matrix_rank
 from czernike import RZern
 
 
+def h5_read_str(h5f, a):
+    tmp = h5f[a][()]
+    if isinstance(tmp, bytes):
+        tmp = tmp.decode('utf-8')
+    return tmp
+
+
 def get_def_files():
     return glob(path.join('..', '*Default Files*'))[0]
 
@@ -174,10 +181,10 @@ NB: DO NOT USE SPACES and USE QUOTES!''')
 
     calibs = []
     for c in cfiles:
-        with File(c, 'r') as f:
-            wavelength_nm = f['/RegLSCalib/wavelength'][()]
-            H = f['/RegLSCalib/H'][()]
-            C = f['/RegLSCalib/C'][()]
+        with File(c, 'r') as h5f:
+            wavelength_nm = h5f['/RegLSCalib/wavelength'][()]
+            H = h5f['/RegLSCalib/H'][()]
+            C = h5f['/RegLSCalib/C'][()]
 
             if args.units == 'rad':
                 kk = 1
@@ -193,9 +200,9 @@ NB: DO NOT USE SPACES and USE QUOTES!''')
                 'kk': kk,
                 'H': H,
                 'C': C,
-                'z': f['/RegLSCalib/z0'][()],
-                'n': int(f['/RegLSCalib/cart/RZern/n'][()]),
-                'serial': f['/RegLSCalib/dm_serial'][()],
+                'z': h5f['/RegLSCalib/z0'][()],
+                'n': int(h5f['/RegLSCalib/cart/RZern/n'][()]),
+                'serial': h5_read_str(h5f, '/RegLSCalib/dm_serial'),
             }
 
             print(f'DM: {d["serial"]} file: {c}')
