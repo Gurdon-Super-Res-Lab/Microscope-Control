@@ -1,0 +1,12 @@
+% Hardware Configuration File
+% Any line starting with "%" will be ignored
+% The first non-comment line must be the configuration name
+
+% Configuration Name:
+Beam Profiler
+
+% Each line in this file defines 1 device
+% Each line should be as follows: Device Company, Device Type, Device Function, Device Engine Path, String Array of Device IDs/Ports/Channels
+% This file can be opened, modified, and saved using the VI found at Microscope-Control\Hardware Configuration\Hardware Configuration VIs\Write Configuration File.vi
+
+["IDS","Camera","Primary","...\\Microscope-Control\\Device Library\\Cameras\\IDS\\IDS Camera Engine.vi"], ["2","","",""]
