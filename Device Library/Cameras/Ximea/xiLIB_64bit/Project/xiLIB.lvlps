@@ -1,0 +1,43 @@
+[ProjectWindow_Data]
+ProjectExplorer.ClassicPosition[String] = "316,674,976,1072"
+
+[AB_Cache_{AB13BC4E-D671-4746-AC76-9611CDEA2C5C}]
+Cache_ProjSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_TargetSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_MyCompChksum[String] = "0987af146d59ddc13bbe2c092916d66f"
+Cache_GenFile_Count[Integer] = 4
+Cache_GenFile[0][Path] Line0001 = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiCon"
+Cache_GenFile[0][Path] Line0002 = "trols/xiControl.exe"
+Cache_GenFile[1][Path] Line0001 = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiCon"
+Cache_GenFile[1][Path] Line0002 = "trols/xiControl.aliases"
+Cache_GenFile[2][Path] Line0001 = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiCon"
+Cache_GenFile[2][Path] Line0002 = "trols/xiControl.ini"
+Cache_GenFile[3][Path] Line0001 = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiCon"
+Cache_GenFile[3][Path] Line0002 = "trols/data/xiApi.NET.dll"
+Cache_GenGUID_Count[Integer] = 4
+Cache_GenGUID[0][String] = "{5CEEB334-3C58-4D8A-B879-2E9282DD0347}"
+Cache_GenGUID[1][String] = "{93C7FBE4-FAB3-496D-B799-E0B771940136}"
+Cache_GenGUID[2][String] = "{452FDAB7-1C3D-4499-A812-891FFEC0AAB6}"
+Cache_GenGUID[3][String] = ""
+Cache_OutputDir[Path] = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiControls"
+
+[AB_Cache_{1AF14C84-4FC3-4504-A202-87E6D675D1D6}]
+Cache_ProjSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_TargetSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_MyCompChksum[String] = "0987af146d59ddc13bbe2c092916d66f"
+Cache_GenFile_Count[Integer] = 4
+Cache_GenFile[0][Path] Line0001 = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiCon"
+Cache_GenFile[0][Path] Line0002 = "trols/xiControl.exe"
+Cache_GenFile[1][Path] Line0001 = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiCon"
+Cache_GenFile[1][Path] Line0002 = "trols/xiControl.aliases"
+Cache_GenFile[2][Path] Line0001 = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiCon"
+Cache_GenFile[2][Path] Line0002 = "trols/xiControl.ini"
+Cache_GenFile[3][Path] Line0001 = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiCon"
+Cache_GenFile[3][Path] Line0002 = "trols/data/xiApi.NET.dll"
+Cache_GenGUID_Count[Integer] = 4
+Cache_GenGUID[0][String] = "{5CEEB334-3C58-4D8A-B879-2E9282DD0347}"
+Cache_GenGUID[1][String] = "{93C7FBE4-FAB3-496D-B799-E0B771940136}"
+Cache_GenGUID[2][String] = "{452FDAB7-1C3D-4499-A812-891FFEC0AAB6}"
+Cache_GenGUID[3][String] = ""
+Cache_OutputDir[Path] = "/C/Users/Durnek60/Desktop/xiLIB/BUILDS/xiControls"
+
