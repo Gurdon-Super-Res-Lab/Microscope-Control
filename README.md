@@ -1,5 +1,5 @@
 # Microscope-Control
-Modular microscope control in LabView for camera based systems primarily used for 4Pi-SMS imaging as described in [Huang et al. Cell 166, 1028–1040 (2016)](http://dx.doi.org/10.1016/j.cell.2016.06.016). This package uses a modular approach to make adding or changing functionality and/or hardware simpler.
+Modular microscope control in LabView for camera based systems primarily used for 4Pi-SMS imaging as described in [Wang et al. Nature Protocols (2020)](https://doi.org/10.1038/s41596-020-00428-7) and [Huang et al. Cell 166, 1028–1040 (2016)](http://dx.doi.org/10.1016/j.cell.2016.06.016). This package uses a modular approach to make adding or changing functionality and/or hardware simpler.
 
 # Software Requirements
 * NI LabVIEW 2016, 64-bit
