@@ -16,4 +16,6 @@ C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Con
 C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\EMBL SMS Image Preview\SMS Image Preview.vi
 C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Interference Locator\4Pi Interference Locator.vi
 C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Dual DM Control\4Pi Dual DM Control.vi
-C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Objective Image Alignment\4Pi Objective Image Alignment.vi
+C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Objective Lock - EMBL\4Pi Objective Lock - EMBL_v2.vi
+C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Focus Lock\4Pi Focus Lock_ids_v1.vi
+% C:\Users\Ries Lab\Documents\Microscope Control from Sheng Account\Microscope-Control\Microscope Modules\4Pi Objective Image Alignment\4Pi Objective Image Alignment.vi
