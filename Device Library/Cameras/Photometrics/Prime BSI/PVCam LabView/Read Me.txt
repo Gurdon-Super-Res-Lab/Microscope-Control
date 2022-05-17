@@ -1,0 +1,11 @@
+This device engine uses PVCam from Photometrics.
+
+Be sure to install PVCam on your computer first.
+
+After you install PVCam, copy the file "LabVIEW.exe.config" to the base installation directory for LabView.
+
+For example, copy "LabVIEW.exe.config" to "C:\Program Files\National Instruments\LabVIEW 2018".
+
+"LabVIEW.exe.config" is a text file (can be opened in Notepad for example) that tells LabView its okay to load
+external libraries. This is required otherwise LabView will not load PVCam and the Prime BSI camera engine
+will not run.
