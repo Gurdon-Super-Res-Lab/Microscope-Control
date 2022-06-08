@@ -99,7 +99,7 @@ classdef remoteControl < handle
                t = obj.private_tcpObject;
                
                % get control value array size
-               ctrlSize = size(ctrlArray, [1, 2, 3]);
+               ctrlSize = size(ctrlArray, [1, 2]);
                
                % reshape control array
                ctrlArray = reshape(ctrlArray, prod(ctrlSize), 1);
@@ -141,15 +141,15 @@ classdef remoteControl < handle
             % get network object
             t = obj.private_tcpObject;
             
-            % wait for data
-            success = waitForBytes(obj, 12);
+            % wait for data - array size as two 4 byte numbers
+            success = waitForBytes(obj, 8);
             
             if ~success
                 return
             end
             
             % read array size
-            arraySize = read(t, 3, 'int32');
+            arraySize = read(t, 2, 'int32');
             
             % reply with confirmation
             write(t, int32(1), 'int32');
@@ -168,8 +168,8 @@ classdef remoteControl < handle
             ctrlValues = read(t, numEle, 'double');
             
             % reshape values
-            ctrlValues = reshape(ctrlValues, arraySize(3), arraySize(2), arraySize(1));
-            ctrlValues = permute(ctrlValues, [2, 1, 3]);
+            ctrlValues = reshape(ctrlValues, arraySize(2), arraySize(1));
+            ctrlValues = ctrlValues.';
             
         end
         
