@@ -1,0 +1,53 @@
+TRIGGER GLOBAL EXPOSURE
+delayed		3
+global reset	5
+
+OUTPUT TRIGGER SOURCE
+readout end	2
+Vsync		3
+
+OUTPUT TRIGGER ACTIVE
+edge		1
+
+OUTPUT TRIGGER KIND
+low		1
+exposure	2
+programable	3
+trigger ready	4
+high		5
+
+OUTPUT TRIGGER POLARITY
+negative	1
+positive	2
+
+SENSOR MODE
+area		1
+
+READOUT SPEED
+slow		1
+fast		2
+
+SENSOR COOLER
+off		1
+on		2
+max		4
+
+SENSOR COOLER STATUS
+off		1
+ready		2
+busy		3
+always		4
+
+EXPOSURE TIME CONTROL
+off		1
+normal		2
+
+DEFFECT CORRECTION MODE
+off		1
+on		2
+
+
+
+
+
+

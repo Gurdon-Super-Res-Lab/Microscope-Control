@@ -4,3 +4,9 @@
 *.xml
 *.txt
 *.bak
+*.mat
+*.dcimg
+*.pdf
+/Microscope Modules/4Pi Phase Retrieval/matlab script/test data
+/Microscope Modules/4Pi Phase Retrieval/matlab script/output
+/Microscope Modules/4Pi Phase Retrieval/matlab script/PSF Toolbox/test data
