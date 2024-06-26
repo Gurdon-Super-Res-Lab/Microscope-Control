@@ -15,6 +15,6 @@ Please visit the [Microscope-Control](https://www.youtube.com/channel/UC7R7VayC6
 For any questions / comments about this software, please use the contact form found at www.gurdonphotonics.org.
 
 # Copyright and Software License
-Copyright (c) 2020 Gurdon Institute, University of Cambridge, UK.
+Copyright (c) 2023 Gurdon Institute, University of Cambridge, UK.
 
 The package is licenced under the [GNU GPL](https://www.gnu.org/licenses/).
