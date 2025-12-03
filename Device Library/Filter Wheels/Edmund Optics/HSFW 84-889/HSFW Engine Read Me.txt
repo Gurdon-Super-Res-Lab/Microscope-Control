@@ -1,0 +1,10 @@
+To run the "HSFW Engine.vi" two DLLs must be copied to this folder.
+
+OptecHID_FilterWheelAPI.dll
+OptecHIDTools.dll
+
+If LabView can't load the .NET assemblies in these DLLs follow the details here:
+
+https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z000000P8XnSAK&l=en-GB
+
+and use Right-Click -> Properties -> Unblock for both DLLs.
