@@ -6,3 +6,6 @@
 *.png
 *.zip
 *.csv
+*.dll
+*.h
+*.lib
